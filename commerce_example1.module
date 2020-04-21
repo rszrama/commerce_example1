@@ -1,0 +1,10 @@
+<?php
+
+use Drupal\commerce_example1\Form\CommerceExample1OrderItemInlineForm;
+
+/**
+ * Implements hook_entity_type_alter().
+ */
+function commerce_example1_entity_type_alter(&$entity_types) {
+  $entity_types['commerce_order_item']->setHandlerClass('inline_form', CommerceExample1OrderItemInlineForm::class);
+}
